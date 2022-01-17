@@ -1,7 +1,9 @@
 from random import *
 from module1 import *
-log_user=['Artjom']
-pas_user=['Rozhkov']
+
+log_user=[]
+pas_user=[]
+
 
 vxod=''
 user=''
@@ -16,10 +18,12 @@ str3 = str2.upper()
 
 
 while vxod not in ["Да","Нет","да","нет"]:
+    log_user=faillist_read('Logins.txt', log_user)
+    pas_user=faillist_read('passwords.txt', pas_user)
     vxod=input("У вас имеется аккаунт?: ")
     print()
     if vxod=="Да" or vxod=="да":
-        autorize()
+        autorize(pas_user,log_user)
     if vxod=="Нет" or "нет":
         login=input("Придумайте логин не длинее 12 символов: ")
         if len(login)>12:
@@ -49,8 +53,9 @@ while vxod not in ["Да","Нет","да","нет"]:
                 while new_pas not in ['n','N','Y','y']:
                     new_pas=input("Ваш аккаунт был успешно создан! Хотите войти в него?(y/n): ")
                 if new_pas in ['Y','y']:
-                    autorize()
+                    autorize(pas_user,log_user)
                    
+
 
                 
 
