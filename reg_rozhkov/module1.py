@@ -1,5 +1,5 @@
 import random
-def isUserUnic(usernamesList,vxod):
+def isUserUnic(usernamesList,vxod): #тут проверка идет если пользователь такой уже в базе
     for i in range (len(usernamesList)):
         if usernamesList[i]==vxod:
             isUnic=False
@@ -11,10 +11,10 @@ def isUserUnic(usernamesList,vxod):
 
 
 
-def autorize(pas_user:list,log_user:list):
-    user=input("Введите логин: ")
-    pas=input("Введите пароль: ")
-    if pas_user.index(pas)==log_user.index(user):
+def autorize(pas_user:list,log_user:list): #сделал отдельную команду на авторизацию чтоб не писать по 20 раз одно и тоже, тут думаю логично как работает
+    user=input("Введите логин: ") #просто спрашивает данные
+    pas=input("Введите пароль: ") #просто спрашивает данные
+    if pas_user.index(pas)==log_user.index(user): #если пароль и логин совпадают, то входит 
         print()
         print("Вы вошли в систему!")
         print()
