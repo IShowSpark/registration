@@ -1,11 +1,11 @@
-from random import *
+from random import * 
 from module1 import *
 
-log_user=[]
-pas_user=[]
+log_user=[] #для списка, то есть переменная для логинов
+pas_user=[] #для списка, то есть переменная для паролей
 
 
-vxod=''
+vxod='' 
 user=''
 new_user=''
 login=''
@@ -16,6 +16,7 @@ str1 = '0123456789'
 str2 = 'qwertyuiopasdfghjklzxcvbnm'
 str3 = str2.upper()
 
+#всё что выше с '' это переменные, думаю понятно это
 
 while vxod not in ["Да","Нет","да","нет"]: #Пока Вход, то есть vxod=input("У вас имеется аккаунт?: ") не будет Да нет и т.д
     log_user=faillist_read('Logins.txt', log_user) #Это читает файлы, функция списана с доски 
